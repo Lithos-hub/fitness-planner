@@ -1,30 +1,22 @@
-<script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
+<script setup>
+import Panel from 'primevue/panel';
 </script>
 
 <template>
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
-  </div>
-  <HelloWorld msg="Vite + Vue" />
+    <section class="bg-white dark:bg-secondary-semidark p-10 rounded-xl flex flex-col gap-8 max-w-3xl">
+        <h1 class="text-4xl text-black dark:text-primary-green font-bold text-center">Tailwind CSS + PrimeVue</h1>
+
+        <Panel header="Custom Design" :ptOptions="{ mergeSections: false }" :pt="{
+            header: 'flex items-center justify-center p-5 bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 rounded-tl-2xl rounded-tr-2xl text-white',
+            title: 'leading-none font-bold uppercase text-2xl',
+            content: 'bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 px-5 pb-8 pt-3 text-white text-center rounded-bl-2xl rounded-br-2xl text-xl'
+        }">
+            <p>
+                Third panel ignores the default preset with <b>mergeSections: false</b> and applies a custom style to all
+                elements of the panel instead.
+            </p>
+        </Panel>
+    </section>
 </template>
 
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
-</style>
+<style scoped></style>
