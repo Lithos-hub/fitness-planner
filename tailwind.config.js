@@ -6,14 +6,19 @@ export default {
 		extend: {
 			colors: {
 				primary: {
-					green: '#06d6a0',
+					1: '#27272F',
+					2: '#D62823',
+				},
+				grayscale: {
+					1: '#060606',
+					2: '#393944',
+					3: '#1B1B23',
 				},
 				secondary: {
+					green: '#06d6a0',
 					blue: '#118ab2',
 					red: '#ef476f',
 					yellow: '#ffd166',
-					semidark: '#1E293B',
-					dark: '#021419',
 				},
 			},
 		},

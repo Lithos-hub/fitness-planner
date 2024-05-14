@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+	font-family: 'avenir';
+	src: url('@/assets/fonts/avenir_roman-12.otf') format('opentype');
+}
+
+body {
+	font-family: 'avenir', sans-serif;
+}
+
+h1 {
+	@apply text-7xl font-bold;
+}
+
+h2 {
+	@apply text-xl;
+}
